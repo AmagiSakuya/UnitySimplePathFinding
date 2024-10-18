@@ -1,4 +1,4 @@
-# Unity Simple Path Finding
+# Unity Simple PathFinding
 
 **A Simple Unity AStar / JSP / JSP+ PathFinding Plugins**
 

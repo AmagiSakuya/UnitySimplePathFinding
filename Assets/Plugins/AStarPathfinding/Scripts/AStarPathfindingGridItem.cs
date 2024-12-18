@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace AmagiSakuya.AstarPathFinding
@@ -39,10 +41,10 @@ namespace AmagiSakuya.AstarPathFinding
             objectRenderer.sharedMaterial.color = color;
         }
 
+#if UNITY_EDITOR
         Vector3 center;
         string centerText;
         Vector3 size;
-
         void OnDrawGizmos()
         {
             if (Selection.activeGameObject != gameObject)
@@ -56,7 +58,7 @@ namespace AmagiSakuya.AstarPathFinding
             Gizmos.color = Color.green;
             Handles.Label(center - new Vector3(size.x, 0, -size.y), centerText);
         }
-
+#endif
         string GetJumpDistacneText()
         {
             int max = 0;
